@@ -1,0 +1,42 @@
+.navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(150, 150, 150, 1);
+  position: fixed;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  margin: 0;
+}
+
+.item {
+  width: 60px;
+  height: 60px;
+  list-style-type: none;
+  transition: width 200ms, height 200ms;
+  margin-top: 10px;
+  margin-left: 10px;
+  /* flex: 1; */
+}
+.item:nth-child(4) {
+  margin-right: 10px;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+}
+
+.item:hover {
+  width: 70px;
+  height: 70px;
+}
+/* #home {
+  background-image: url("./homeBlack.svg");
+  background-position: center;
+  background-size: cover;
+} */

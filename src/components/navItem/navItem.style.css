@@ -1,0 +1,24 @@
+.navItem {
+  display: inline-flex;
+  font-size: 1rem;
+  font-family: "Advent Pro", sans-serif;
+  padding: 0.3em;
+  padding-top: 1em;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+#navBarLogo {
+  padding: 0;
+  padding-right: 20px;
+}
+.itemMenu:hover + ul {
+  display: block;
+}
+
+@keyframes changeGradient {
+  to {
+    background-color: green;
+  }
+}

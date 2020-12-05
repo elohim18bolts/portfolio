@@ -1,0 +1,31 @@
+.tooltip {
+  position: absolute;
+  top: -40px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  width: 200px;
+  height: 35px;
+  border-radius: 35px;
+  transform: translate(-30%, 0);
+  animation: showUp forwards 400ms;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .tooltip {
+    display: none;
+  }
+}
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

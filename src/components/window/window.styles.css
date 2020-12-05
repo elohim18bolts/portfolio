@@ -1,0 +1,116 @@
+.window {
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
+  border-radius: 1rem;
+  width: 50%;
+  height: 70%;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.window-full {
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: lightgreen;
+  top: 0;
+  left: 0;
+  animation: scaleUp forwards 400ms;
+}
+
+.top-panel {
+  width: 100%;
+  background-color: #000096;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 4px 10px lightblue;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.top-panel button {
+  display: block;
+  color: white;
+  margin-right: 0.5rem;
+  text-align: center;
+  border-radius: 100%;
+  border-style: none;
+  width: 20px;
+  height: 20px;
+}
+
+.top-panel div {
+  margin: auto;
+  transform: translateX(-75%);
+}
+
+.top-panel .close {
+  background-color: red;
+  margin-left: 0.5rem;
+}
+.top-panel .maximize {
+  background-color: green;
+}
+
+.top-panel button span {
+  opacity: 0;
+  display: block;
+  transform: translateY(-5%);
+  transition: opacity 0.2s;
+}
+.top-panel button:hover > span {
+  opacity: 1;
+}
+
+.window-body {
+  background-color: lightcyan;
+  display: flex;
+  overflow: auto;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.left-panel {
+  height: 98%;
+  overflow: scroll;
+  text-align: left;
+  background-color: lightpink;
+  flex: 15%;
+  padding-bottom: 1%;
+}
+.info-panel {
+  text-align: left;
+  height: 98%;
+  overflow: auto;
+  background-color: white;
+  flex: 85%;
+  padding-bottom: 1%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .window {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

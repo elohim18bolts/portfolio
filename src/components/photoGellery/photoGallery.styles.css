@@ -1,0 +1,26 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 1rem;
+}
+
+.gallery img {
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+@media only screen and (min-width: 600px) {
+  .card-wide {
+    grid-column: span 2;
+  }
+
+  .card-tall {
+    grid-row: span 2;
+  }
+}

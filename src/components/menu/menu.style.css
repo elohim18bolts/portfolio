@@ -1,0 +1,109 @@
+:root {
+  --delay: 100ms;
+}
+.menu {
+  box-sizing: border-box;
+  /* width: 100%; */
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 55px; */
+  background: lightblue;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+  background: rgba(20, 20, 20, 0.5);
+  /* animation-name: animeMenu; */
+  /* animation-duration: 500ms; */
+  /* animation-direction: normal; */
+  transform: scale(1);
+  /* border-left: 1px solid white; */
+  border-radius: 5%;
+}
+
+.hmenu {
+  width: 100%;
+  background: black;
+  display: flexbox;
+  flex-direction: row;
+  justify-content: center;
+  /* animation: moveLeft forwards 500ms; */
+  position: absolute;
+  transform: translate(-50%, 0);
+  /* left: 500px; */
+}
+
+.hmenu li {
+  display: inline-flex;
+  padding: 1rem;
+  position: relative;
+  left: 500px;
+  animation: moveLeft forwards 200ms;
+  color: white;
+}
+.hmenu li:nth-child(1) {
+  animation-delay: calc(1 * 100ms);
+}
+.hmenu li:nth-child(2) {
+  animation-delay: calc(2 * 100ms);
+}
+.hmenu li:nth-child(3) {
+  animation-delay: calc(3 * 100ms);
+}
+.hmenu li:nth-child(4) {
+  animation-delay: calc(4 * 100ms);
+}
+.hmenu li:nth-child(5) {
+  animation-delay: calc(5 * 100ms);
+}
+.hmenu li span:hover {
+  color: lightblue;
+}
+.menu:hover {
+  display: block;
+}
+
+.menuItem {
+  text-decoration: none;
+  text-align: left;
+  color: white;
+}
+
+.menuItem button {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
+  background: none;
+  border: none;
+  color: inherit;
+}
+.menuItem:hover {
+  background: none;
+  /* border-left: 2px solid yellow; */
+  animation: changeColor forwards 200ms;
+}
+
+@keyframes animeMenu {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes changeColor {
+  to {
+    color: lightblue;
+  }
+}
+
+@keyframes moveLeft {
+  to {
+    left: 0;
+  }
+}

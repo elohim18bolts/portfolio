@@ -1,0 +1,14 @@
+.side-panel {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.side-panel li {
+  padding: 5px;
+  font-weight: 500;
+}
+.side-panel li:hover {
+  font-weight: bold;
+  background-color: #ffd7de;
+  cursor: pointer;
+}
