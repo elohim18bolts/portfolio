@@ -8,7 +8,7 @@ import { SidePanel } from "./sidePanel.component";
 import { PhotoShopContent } from "./photoshop.content";
 
 export class Window extends React.Component {
-  state: { showWindow: boolean; windowClass: string };
+  state: { showWindow: boolean; windowClass: string; showPanel?: boolean };
   props: {
     children?: string;
     name?: string;
@@ -25,6 +25,7 @@ export class Window extends React.Component {
     this.state = {
       showWindow: true,
       windowClass: "window",
+      showPanel: true,
     };
     // console.log(this.state.showWindow);
   }
@@ -62,8 +63,20 @@ export class Window extends React.Component {
             </button>
             <div>{this.props.children}</div>
           </div>
+
+          {this.props.hasSidePanel ? (
+            <div className="top-bar">
+              <button
+                onClick={() =>
+                  this.setState({ showPanel: !this.state.showPanel })
+                }
+              >
+                Menu
+              </button>
+            </div>
+          ) : null}
           <div className="window-body">
-            {this.props.hasSidePanel ? (
+            {this.props.hasSidePanel && this.state.showPanel ? (
               <div className="left-panel">
                 <SidePanel
                   items={this.props.sidePanelItems}
